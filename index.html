@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="rez.css" />
+    <title>Резюме</title>
+</head>
+
+<body>
+    <div id="resume">
+        <img src="https://avatars.dzeninfra.ru/get-zen_doc/9662528/pub_64634043c40e716a0962cfaf_6463406248942e41cc7afc49/scale_1200">
+        <p>Имя: <span id="name">Ксения</span></p>
+    <p>Фамилия: <span id="surname">Лазарева</span></p>
+    <input type="text" id="newSurname" placeholder="Введите новую фамилию">
+    <button onclick="changeSurname()">Ввод</button>
+ <input type="text" id="newName" placeholder="Введите новое имя">
+ <button onclick="changeName()">Ввод</button>
+    <button onclick="changeBackgroundColor()">Изменить цвет фона</button>
+        <p>Телефон: <a href=#>555-666-7777</a>
+        <p>Email: <a href=#>lazarevaaa@gmail.com</a>
+            <script>
+                function changeSurname() {
+                    var newSurname = document.getElementById("newSurname").value;
+                    document.getElementById("surname").innerText = newSurname;
+                }
+          function changeName() {
+                    var newSurname = document.getElementById("newName").value;
+                    document.getElementById("name").innerText = newSurname;
+                }
+          
+                function changeBackgroundColor() {
+                    var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+                    document.body.style.backgroundColor = randomColor;
+                }
+            </script>
+        <dl>
+            <dt>Образование
+            <dd>
+                <h2>МГТУ СТАНКИН</h2>
+                <p><strong>Любимый предмет:</strong> Математика<br />
+                    <strong>Нелюбимый:</strong> Линейная алгебра</p>
+        </dl>
+        <dl>
+            <dt>Навыки
+            <dd>
+                <h2>Hard skills</h2>
+                <p> Знание иностранного языка, основы программирования, математического анализа,визуализация данных,навык работы с таблицами.
+                <h2>Soft skills</h2>
+                <p> Устойчивость к стрессу,логическое мышление,самолисциплина,лёгкость адаптации к меняющимся условиям.
+                </dl>
+                <dl>
+                    <dt>Хобби
+                    <dd>Чтение книг,бег,кулинария,путешествия
+                </dl>
+                <dl>
+                    <dt>Рекомендации
+                    <dd>Доступны для запроса
+                </dl>
+            </div>
+        </body>
+    </div>
+</body>
+
+</html>
